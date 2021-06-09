@@ -1,9 +1,11 @@
 # Pi Trebuchet
-Elisabeth Scharf and Abigail Paquette
+Elisabeth Scharf and Abigail Paquette - Engineering 4 Repo & Documentation
 
 [Trello Board](https://trello.com/b/15McbNyB/engineering-4-project)
 
 [Calendar](https://jamboard.google.com/d/1JnHUE4IZWikT05Q0Ya0kpPUMJIv1QDpOZKAwVSAdiaQ/edit?usp=sharing) 
+
+[Onshape Document](https://cvilleschools.onshape.com/documents/231c459fbc6840d3f00a1b9f/w/e7df1ab6ccf7a00b59ac0257/e/ae8347c1ef2b746ac703c727)
 
 
 ## Table of Contents
@@ -113,14 +115,15 @@ Constraints:
 
 [Possible Release Pin Mechanism (3:06 to 3:40) ](https://www.youtube.com/watch?v=BVnrD9m3nSI&t=185s)
 
+
 **Engineering Process:**
 - [x] Identify problem or goal 
 - [x] Identify resources and constraints
 - [x] Brainstorm ideas
 - [x] Pick a solution
 - [x] Develop an initial design (pencil and paper, CAD, etc.)
-- [ ] Construct a prototype
-- [ ] Test your design
+- [x] Construct a prototype
+- [x] Test your design
 - [ ] Refine/optimize your design
 - [ ] Present finished product 
 
@@ -137,7 +140,7 @@ Constraints:
 |----|----------------|-----------------|------------|-----------------------------|
 |March 8-12|Submit proposal and design parts for release pin|Submit proposal and finish pi assignments from beginning of year|Our proposal was submitted midweek, and we are starting to work in earnest on our project. The parts for the release pin mechanism were submitted Friday, and Abby will complete her pi assignments over the weekend.|Do pi assignments over the weekend.|
 |March 15-19|Design release pin mechanism|Code release pin mechanism servo|One iteration of the release pin mechanism has been designed and lasercut, but scale was a bit off and testing still has to be done. The code for the servo has been started, but it also still needs to be worked on.|We are just going to continue to work hard and make sure to utilize time outside of class.|
-|March 22-26|Build the trebuchet base|Research the math and physics behind the launch, work with the equations to optimize launch by changing release angle|
+|March 22-26|Build the trebuchet base|Research the math and physics behind the launch, work with the equations to optimize launch by changing release angle|The base went through several conceptual iterations, but we ended up going with a lasercut one comprised of two triangles that were connected by a u-shaped channel (made of bent acrylic) that would hold the Pi. The two biggest challenges with this (which continued into future weeks) were creating a two-piece axle to connect the tops of the triangles and learning how to design in 2D for something that would later be 3 dimensional.|
 |March 29 - April 2|Begin work on the sling|Implement launch optimization in code (with release pin servo) and code launch servo|
 |Spring Break| N/A | N/A |
 |April 12-16|Design and assemble counterweight|Start working on flask user interface|
@@ -149,9 +152,76 @@ Constraints:
 
 
 ## Documentation: ## 
-**Things we've learned:**
+
+**Little lessons along the way**
 
 E: In the midst of trying to sort through some mates to find an error, I realized that things would be so much easier if I had named my mates. 
 Making that change has been helpful and has allowed me to troubleshoot more easily, especially as I add more and more pieces and more and more mates. 
 
 <img src="Media/NamingMates.png" width="300">
+
+E: Another tip for Onshape organization is to create folders to organize your part studios and assemblies within a single document. As we added more and more parts, it became challenging to scroll and find each particular part. I ended up with six folders and some sub-folders that told me where to go when looking for specific parts related to the different mechanisms on the trebuchet. 
+
+<img src="Media/FolderPhoto.png" width="600">
+
+Challenges we faced:
+- Using the sheet metal tool to simulate bent acrylic
+  - Learning how to do that in Onshape
+  - Getting help from Dr. Shields
+  - Editing the model
+- Using a heat gun to bend acrylic 
+  - Abby's experience doing that for the first time
+  - Using a wooden block as a mold
+- Designing an axle to stablize the arm
+  - **Design challenge:** we had to be able to put the arm onto the axle, but also make sure that once it was on it would not shift from side to side. 
+  - **Thought Process:** We only wanted rotational movement in one plane, but couldn't think how to effectively create walls on each side of the arm that would go on after the arm. We decided that the best plan would be to create a two-piece axle that would connect in the middle after the arm was already on. 
+  - **Two-piece design solution:** The product was a two-piece axle where each side connected to one of the triangular walls and had a cone shape on the other end (specially designed to limit support material - just for you Dr. Shields!). The plan was to slide the arm onto a little part that stuck out from one of the sides and then to attach the two parts with deeply countersunk screws. 
+  - **Revisions:** Creating a headless screw
+  - Friction reduction: sanding and dry lubrication with graphite 
+- Designing a mechanized moving pin
+  - Finding a design
+  - Replicating it in Onshape
+  - Assembling it all in Onshape
+  - Scale for dxf files... (lesson learned)
+  - Current photos
+- Correlating the servo values (-1 to 1) with the release pin angles (0-180deg) and omega (rad)
+  - Protractor photo
+  - Screenshot of the graph to find the relationship
+- All the math... 
+  - Energy & kinematics
+  - New formula for omega
+  - Adjustments to the new omega formula
+
+
+##### Design #####
+
+There were a few distinct aspects of the design:
+1. PiHolder
+2. Custom Axle
+3. Arm
+4. Release Pin Mechanism 
+
+** 1. PiHolder ** 
+
+The PiHolder presented a unique challenge because we planned on lasercutting the design first and then bending the acrylic afterwards. 
+
+<img src="Media/ArmDesign.png" width="300">
+<img src="Media/AxleCAD.png" width="300">
+<img src="Media/FullAssembly.png" width="300">
+<img src="Media/PiHolderDesign.png" width="300">
+<img src="Media/RevolutionDiagram.png" width="300">
+<img src="Media/NamingMates.png" width="300">
+<img src="Media/Whiteboard1.jpg" width="300">
+<img src="Media/Protractor.jpg" width="300">
+<img src="Media/AngleMeasurements.JPG" width="300">
+
+<img src="Media/ArmRotation.png" width="300">
+<img src="Media/CustomBatteryHolder.png" width="300">
+<img src="Media/DrawingTemplate.png" width="300">
+<img src="Media/FullArmAssembly.png" width="300">
+<img src="Media/FullAxle.png" width="300">
+<img src="Media/FullTrebuchet.png" width="300">
+<img src="Media/PiHolderPart.png" width="300">
+<img src="Media/ScrewConnection.png" width="300">
+<img src="Media/SheetMetalSketch.png" width="300">
+<img src="Media/SheetMetalTest.png" width="300">
