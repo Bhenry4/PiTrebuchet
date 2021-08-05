@@ -59,8 +59,8 @@ def compute(userMass, distance):
 def index():
     global msg0, msg1, msg2, msg3, msg4, msg5
     if request.method == "POST":
-        compute(
-            int(request.form["userMass"]), int(request.form["distance"]))
+        formData = {"userMass": int(request.form["userMass"]), "distance": int(request.form["distance"])}
+        compute(formData["userMass"], formData["distance"])
     return render_template("benjiFlaskTest.html", msg0=msg0, msg1=msg1, msg2=msg2, msg3=msg3, msg4=msg4, msg5=msg5)
 
 
