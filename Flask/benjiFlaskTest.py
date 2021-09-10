@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request # import modules
 import math
-app = Flask(__name__)
-msg0 = msg1 = msg2 = msg3 = msg4 = msg5 = ""
+app = Flask(__name__) # tells flask this is the main program
+
+msg0 = msg1 = msg2 = msg3 = msg4 = msg5 = "" # creates variables to be used on the webpage
 
 
-def compute(userMass, distance):
+def compute(userMass, distance): # takes the user input and does math
     global msg0, msg1, msg2, msg3, msg4, msg5
 
     mCW = 1.74  # mass of cw, kg (3 washers weighing .58 each)
@@ -55,10 +56,10 @@ def compute(userMass, distance):
     msg5 = degTheta2
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"]) # defines the methods flask will accept from the client
 def index():
     global msg0, msg1, msg2, msg3, msg4, msg5
-    if request.method == "POST":
+    if request.method == "POST": # activates when the user submits the form
         formData = {"userMass": int(request.form["userMass"]), "distance": int(request.form["distance"])}
         compute(formData["userMass"], formData["distance"])
     return render_template("benjiFlaskTest.html", msg0=msg0, msg1=msg1, msg2=msg2, msg3=msg3, msg4=msg4, msg5=msg5)
