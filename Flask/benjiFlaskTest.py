@@ -29,10 +29,9 @@ def compute(userMass, distance): # takes the user input and does math
     print(vPF)  # printing the velocity
     msg1 = vPF
 
-    # Getting a user input for how far they want their projectile to go
     deltaX = distance*.3048  # Converting the user inputted distance from feet to meters
 
-    # theta = (math.asin((deltaX*g)/(vPF*vPF)))/2 #Range equation, simple way to find theta, but wasn't givin us good values
+    # theta = (math.asin((deltaX*g)/(vPF*vPF)))/2 #Range equation, simple way to find theta, but wasn't giving us good values
 
     theta1 = math.atan((deltaX+(math.sqrt((deltaX*deltaX)-(4*((g*deltaX*deltaX)/(2*vPF))
                        * (((g*deltaX*deltaX)/(2*vPF))+y)))))/((g*deltaX*deltaX)/vPF))
