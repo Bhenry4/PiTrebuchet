@@ -59,9 +59,9 @@ def compute(userMass, distance): # takes the user input and does math
 def index():
     global msg0, msg1, msg2, msg3, msg4, msg5
     if request.method == "POST": # activates when the user submits the form
-        formData = {"userMass": int(request.form["userMass"]), "distance": int(request.form["distance"])}
-        compute(formData["userMass"], formData["distance"])
-    return render_template("benjiFlaskTest.html", msg0=msg0, msg1=msg1, msg2=msg2, msg3=msg3, msg4=msg4, msg5=msg5)
+        formData = {"userMass": int(request.form["userMass"]), "distance": int(request.form["distance"])} # Puts the user input in a dict
+        compute(formData["userMass"], formData["distance"]) # Runs the math with the user input
+    return render_template("benjiFlaskTest.html", msg0=msg0, msg1=msg1, msg2=msg2, msg3=msg3, msg4=msg4, msg5=msg5) # Displays data on webpage
 
 
 app.run(port=80)
